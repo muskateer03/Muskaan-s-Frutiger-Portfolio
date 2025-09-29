@@ -56,7 +56,7 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
     <div className="desktop-layout">
       <aside className="sidebar">
         <div className="profile">
-          <Image src="/muskaan.JPG" alt="Muskaan" width={96} height={96} className="profile-photo" />
+          <Image src="/muskaan.jpg" alt="Muskaan" width={96} height={96} className="profile-photo" />
           <h2>Hi, I&apos;m Muskaan!</h2>
           <p>Current Student @ Johns Hopkins University MS in Artificial Intelligence</p>
           <p>BS in Computational Economics @ Pace University</p>
