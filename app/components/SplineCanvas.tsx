@@ -9,14 +9,14 @@ export default function SplineCanvas() {
     if (canvasRef.current) {
       const app = new Application(canvasRef.current);
       app.load('/scene.splinecode').then(() => {
-        const camera = app.mainCamera;
+        // const camera = app.mainCamera;
 
-        if (camera) {
-          // Example: Move camera closer and adjust angle
-          camera.position.set(0, 0, 50); // X, Y, Z
-          camera.rotation.set(0, 0, 0);  // Optional: adjust rotation
-          camera.fov = 45;               // Optional: zoom level (lower = zoomed in)
-        }
+        // if (camera) {
+        //   // Example: Move camera closer and adjust angle
+        //   camera.position.set(0, 0, 50); // X, Y, Z
+        //   camera.rotation.set(0, 0, 0);  // Optional: adjust rotation
+        //   camera.fov = 45;               // Optional: zoom level (lower = zoomed in)
+        // }
       });
     }
   }, []);
