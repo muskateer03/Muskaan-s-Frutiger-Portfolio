@@ -36,7 +36,9 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
         <button className="drawer-close" onClick={() => setMenuOpen(false)}>✕</button>
 
         <div className="profile">
-          <Image src="./muskaan.jpg" alt="Muskaan" width={96} height={96} className="profile-photo" />
+            <Image src="/vercel.svg" alt="Temporary Logo" width={96} height={96} />
+
+          {/* <Image src="./muskaan.jpg" alt="Muskaan" width={96} height={96} className="profile-photo" /> */}
           <h2>Hi, I'm Muskaan!</h2>
           <p>Current Student @ Johns Hopkins University MS in Artificial Intelligence</p>
           <p>BS in Computational Economics @ Pace University</p>
