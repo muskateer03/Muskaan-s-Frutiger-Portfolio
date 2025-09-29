@@ -39,7 +39,7 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
           <Image src="/muskaan.jpg" alt="Muskaan" width={96} height={96} className="profile-photo" />
           <h2>Hi, I'm Muskaan!</h2>
           <p>Current Student @ Johns Hopkins University MS in Artificial Intelligence</p>
-          <p>BS in Computational Economics @ Pace University</p>
+          <p>BS in Computational Economics @ Pace University — it&apos;s where I started!</p>
           <h3>Skills</h3>
           <p>Java | Python | C++ | React | Three.js | Stata | SQL | R | Excel | Adobe Suite</p>
         </div>
@@ -57,7 +57,7 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
       <aside className="sidebar">
         <div className="profile">
           <Image src="/muskaan.jpg" alt="Muskaan" width={96} height={96} className="profile-photo" />
-          <h2>Hi, I'm Muskaan!</h2>
+          <h2>Hi, I&apos;m Muskaan!</h2>
           <p>Current Student @ Johns Hopkins University MS in Artificial Intelligence</p>
           <p>BS in Computational Economics @ Pace University</p>
           <h3>Skills</h3>

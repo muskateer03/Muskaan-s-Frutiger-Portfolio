@@ -14,9 +14,17 @@ export default function Home() {
 
   useEffect(() => {
   const handleResize = () => setIsMobile(window.innerWidth <= 768);
-  handleResize(); // run once on mount
-  window.addEventListener('resize', handleResize);
-  return () => window.removeEventListener('resize', handleResize);
+
+  if (typeof window !== 'undefined') {
+    handleResize(); // run once on mount
+    window.addEventListener('resize', handleResize);
+  }
+
+  return () => {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', handleResize);
+    }
+  };
 }, []);
   // Start music on first interaction
   useEffect(() => {
@@ -148,7 +156,6 @@ export default function Home() {
               <div className="timeline-line" />
 
               {projects.map((project, index) => {
-  const isHiddenOnMobile = project.mobileHide;
 
   return (
     <motion.div
@@ -167,16 +174,16 @@ export default function Home() {
         </div>
         <p>{project.description}</p>
 
-        {openIndex === index && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            transition={{ duration: 0.4 }}
-            style={{ overflow: 'hidden', marginTop: '16px' }}
-          >
-            {project.content}
-          </motion.div>
-        )}
+        {openIndex === index ? (
+  <motion.div
+    initial={{ opacity: 0, height: 0 }}
+    animate={{ opacity: 1, height: 'auto' }}
+    transition={{ duration: 0.4 }}
+    style={{ overflow: 'hidden', marginTop: '16px' }}
+  >
+    {project.content}
+  </motion.div>
+) : null}
       </div>
     </motion.div>
   );
